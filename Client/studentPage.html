@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBHS House Points</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <script src="https://accounts.google.com/gsi/client" async></script>
+</head>
+
+<body>
+    <img id = "housePointFeed" src = "Images/Mail Icon.png" onmouseover="toggleImage()" onmouseout="toggleImage()">
+    <div id="hpDisplay">
+        <span class="dot">
+            <p id="hpNumber">999</p>
+        </span>
+        <p id="hpStat">You are ranked #1 in Craig house for total house points.</p>
+    </div>
+    <div id="hpShop">
+        <img id="shopBackground" src = "Images/HPShopBackground.png">
+        <h1 id = "shopHeading">House Points Shop</h1>
+        <div class="shopItem">
+            <p class="price">5</p>
+            <p class="item">Skip the queue pass</p>
+        </div>
+        <div class="shopItem">
+            <p class="price">50</p>
+            <p class="item">£5 Sports Center voucher</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const mailIcon = document.getElementById("housePointFeed");
+    let highlighted = false;
+    const toggleImage = () =>{
+        if(!highlighted){
+            mailIcon.src = "Images/Mail Icon Highlighted.png";
+            highlighted = true;
+        } else {
+            mailIcon.src = "Images/Mail Icon.png";
+            highlighted = false;
+        }
+    }
+</script>
