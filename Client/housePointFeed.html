@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBHS House Points</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <script src="https://accounts.google.com/gsi/client" async></script>
+</head>
+
+<body>
+    <h1 class="mainHeading" id = "HPfeedHeading">House Point Feed</h1>
+    <img id = "HPFeedBackground" src="Images/backgroundHPFeed.png">
+    <a href = "studentPage.html"><img id="homeButton" src="Images/Home Icon.png" onmouseover="toggleImage()" onmouseout="toggleImage()"></a>
+    <div class="notification">
+        <div class="left">
+            <p class="amount">+ 1</p>
+        </div>
+        <div class="right">
+            <p class="description">For exhibiting belonging in Maths - Mrs Clubb</p>
+        </div>
+    </div>
+    <div class="notification">
+        <div class="left">
+            <p class="amount">+ 1</p>
+        </div>
+        <div class="right">
+            <p class="description">For exhibiting belonging in Maths - Mrs Clubb</p>
+        </div>
+    </div>
+    <div class="notification">
+        <div class="left">
+            <p class="amount">+ 1</p>
+        </div>
+        <div class="right">
+            <p class="description">For exhibiting belonging in Maths - Mrs Clubb</p>
+        </div>
+    </div>
+    <div id = "logout">
+        <img src = "Images/Logout.png" id = "logoutIcon">
+        <p id = "logoutText">Logout</p>
+    </div>
+</body>
+
+</html>
+<script>
+    const homeIcon = document.getElementById("homeButton");
+    let highlighted = false;
+    const toggleImage = () => {
+        if (!highlighted) {
+            homeIcon.src = "Images/Home Icon Highlighted.png";
+            highlighted = true;
+        } else {
+            homeIcon.src = "Images/Home Icon.png";
+            highlighted = false;
+        }
+    }
+</script>
